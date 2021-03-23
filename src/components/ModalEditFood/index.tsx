@@ -29,12 +29,12 @@ function ModalEditFood({
     <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
       <Form ref={formRef} onSubmit={handleSubmit} initialData={editingFood}>
         <h1>Editar Prato</h1>
-        <Input name="image" placeholder="Cole o link aqui" />
+        <Input name="image" placeholder="Cole o link aqui" required />
 
-        <Input name="name" placeholder="Ex: Moda Italiana" />
-        <Input name="price" placeholder="Ex: 19.90" />
+        <Input name="name" placeholder="Ex: Moda Italiana" required />
+        <Input name="price" placeholder="Ex: 19.90" type="number" required />
 
-        <Input name="description" placeholder="Descrição" />
+        <Input name="description" placeholder="Descrição" required />
 
         <button type="submit" data-testid="edit-food-button">
           <div className="text">Editar Prato</div>
