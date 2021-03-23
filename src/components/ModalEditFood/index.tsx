@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { FiCheckSquare } from "react-icons/fi";
-
+import { FoodProps } from "../../types";
 import { Form } from "./styles";
 import Modal from "../Modal";
 import Input from "../Input";
@@ -10,15 +10,6 @@ type ModalAddFoodProps = {
   setIsOpen: () => void;
   editingFood: FoodProps;
   handleUpdateFood: (food: FoodProps) => Promise<void>;
-};
-
-type FoodProps = {
-  id: number;
-  image: string;
-  name: string;
-  price: string;
-  description: string;
-  available: boolean;
 };
 
 function ModalEditFood({

@@ -1,17 +1,8 @@
 import { useState } from "react";
 import { FiEdit3, FiTrash } from "react-icons/fi";
-
+import { FoodProps } from "../../types";
 import { Container } from "./styles";
 import api from "../../services/api";
-
-type FoodProps = {
-  id: number;
-  image: string;
-  name: string;
-  description: string;
-  price: string;
-  available: boolean;
-};
 
 type ComponentFoodProps = {
   food: FoodProps;
